@@ -63,8 +63,8 @@ public class PR6 {
             {
                 for (int j = 0; j < M; j++)
                 {
-                    a[i][j] = i+1;
-                    a[i][j] = j+1;
+                    a[i][j] = (int)(Math.random()*10);
+                    a[i][j] = (int)(Math.random()*10);
                     System.out.print(" " +a[i][j]);
                 }
                 System.out.println("");
@@ -91,7 +91,39 @@ public class PR6 {
             }
         }
 
+        if(k==3){
+            int N = 0;
+
+            while(N <= 0){
+                System.out.println("Введите длинну массива: ");
+                N = nomer.nextInt();
+            }
+
+            int a[] = new int[N];
+
+            System.out.print("Чётные: ");
+            for(int i = 0; i < a.length; i++){
+                a[i] = (int)(Math.random()*10);
+                if(i % 2 == 0){
+
+                    System.out.print(i+" ");
+                }
+            }
+            System.out.println();
+            System.out.print("Нечётные: ");
+            for(int i = 0; i < a.length; i++){
+                a[i] = (int)(Math.random()*10);
+                if(i % 2 != 0){
+
+                    System.out.print(i+" ");
+                }
+            }
 
 
+        }
+
+        if (k==4){
+
+        }
     }
 }
