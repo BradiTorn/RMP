@@ -124,6 +124,54 @@ public class PR6 {
 
         if (k==4){
 
+
+
+            int N = 0;
+            int M = 0;
+            int pom = 0;
+            int a[][];
+
+            while(N <= 0)
+            {
+                System.out.print("Введите значение N: ");
+                N = nomer.nextInt();
+            }
+            while (M <= 0)
+            {
+                System.out.print("Введите значение M: ");
+                M = nomer.nextInt();
+            }
+
+            a = new int[N][M];
+
+            System.out.println("Исходная матрица:");
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < M; j++)
+                {
+                    a[i][j] = (int)(Math.random()*10);
+                    a[i][j] = (int)(Math.random()*10);
+                    System.out.print(" " +a[i][j]);
+                }
+                System.out.println("");
+            }
+
+            System.out.println("Изменённая матрица:");
+            for(int i = 0; i < M; i++){
+
+                for(int j = 0; j < M - i; j++){
+                    System.out.print(" " +a[i][j]);
+                }
+
+                for(int j = i + 1; j < M; j++){
+                    System.out.print(" " +a[M - i - 1][j]);
+                }
+                System.out.println("");
+            }
+
+
         }
+
+
     }
 }
