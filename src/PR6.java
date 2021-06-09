@@ -7,7 +7,11 @@ public class PR6 {
         System.out.print("Введите номер задания: ");
         int k = nomer.nextInt();
 
+        //Дан массив размера N и целые числа K и L (1 ≤ K ≤ L ≤ N).
+        //Найти среднее арифметическое элементов массива с номерами от K до L
+        //включительно.
         if(k==1){
+
             System.out.print("Введите длину массива: ");
             int n = nomer.nextInt();
             int a[]  = new int[n];
@@ -26,18 +30,22 @@ public class PR6 {
                     System.out.println("0_0");
                 }
             }
+
             for(int i = 0; i < n ;i++){
                 a[i] = i;
                 System.out.println("a["+ i +"] = " +i);
 
             }
+
             double sum = 0;
             for(int i = K; i<=L; i++){
                 sum += a[i];
             }
             System.out.print(((sum)/(L-K+1)));
+
         }
 
+        //Зеркальное отражение матрицы
         if(k==2){
 
             int N = 0;
@@ -91,7 +99,9 @@ public class PR6 {
             }
         }
 
+        //Четные нечётные
         if(k==3){
+
             int N = 0;
 
             while(N <= 0){
@@ -101,30 +111,47 @@ public class PR6 {
 
             int a[] = new int[N];
 
+            System.out.print("Исходный массив: ");
+
+            for(int i = 0; i < a.length; i++){
+                a[i] = (int)(Math.random()*10);
+                System.out.print(i+" ");
+
+            }
+
+            System.out.println(" ");
+
             System.out.print("Чётные: ");
+
             for(int i = 0; i < a.length; i++){
                 a[i] = (int)(Math.random()*10);
                 if(i % 2 == 0){
-
                     System.out.print(i+" ");
                 }
             }
+
             System.out.println();
             System.out.print("Нечётные: ");
-            for(int i = 0; i < a.length; i++){
-                a[i] = (int)(Math.random()*10);
-                if(i % 2 != 0){
 
-                    System.out.print(i+" ");
-                }
+            for(int i = 0; i > a.length-1; i--){
+                a[i] = (int)(Math.random()*10);
+                    if(i % 2 != 0) {
+                        System.out.print(a[i] + " ");
+                    }
+
             }
+
+//            for (int i = a.length-1; i > 0; i--) {
+//                a[i] = (int)(Math.random()*10);
+//                if(i % 2 != 0) {
+//                    System.out.print(a[i] + " ");
+//                }
+//            }
 
 
         }
 
         if (k==4){
-
-
 
             int N = 0;
             int M = 0;
@@ -169,9 +196,8 @@ public class PR6 {
                 System.out.println("");
             }
 
-
         }
 
-
     }
+
 }
